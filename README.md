@@ -46,16 +46,19 @@ const data = {
       id: "eb7c60bd-5cf5-4872-9997-61c717b0f0c0",
       groupId: "7528bb2e-8513-440c-8672-1e6535cbe439",
       name: "tab1",
+      content: "tab1 content",
     },
     "b8f3ed8f-61a3-4017-8415-63c624719b1a": {
       id: "b8f3ed8f-61a3-4017-8415-63c624719b1a",
       groupId: "7528bb2e-8513-440c-8672-1e6535cbe439",
       name: "tab2",
+      content: "tab2 content",
     },
     "afa61212-fd95-447a-b1a9-22e4ce3c142e": {
       id: "afa61212-fd95-447a-b1a9-22e4ce3c142e",
       groupId: "7528bb2e-8513-440c-8672-1e6535cbe439",
       name: "tab3",
+      content: "tab3 content",
     },
   },
 };

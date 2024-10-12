@@ -1,6 +1,6 @@
 {
   "name": "react-group-tabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react group tabs component",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
