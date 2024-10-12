@@ -35,6 +35,7 @@ export interface ITab {
     id: string;
     groupId: string;
     name: string;
+    content: string;
   };
 }
 

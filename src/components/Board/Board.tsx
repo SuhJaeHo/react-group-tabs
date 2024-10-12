@@ -745,7 +745,19 @@ const Group = React.forwardRef<React.ElementRef<"div">, IGroup[keyof IGroup]>((p
     >
       <GroupHeader {...props} groupElementPosition={groupElementPosition} />
       <ResizeHandlers groupId={id} />
-      <div>{boardContext.tab[selectedTabId].name}</div>
+      <TabContent {...props} />
+    </div>
+  );
+});
+
+const TabContent = React.forwardRef<React.ElementRef<"div">, IGroup[keyof IGroup]>((props, forwardedRef) => {
+  const boardContext = useContext(BoardDataStateContext);
+  const { selectedTabId } = props;
+  const tabContent = boardContext.tab[selectedTabId].content;
+
+  return (
+    <div className="overflow-auto" style={{ height: `calc(100% - ${TAB_SIZE.Height}px)` }}>
+      {tabContent}
     </div>
   );
 });
@@ -867,7 +879,7 @@ const Tab = React.forwardRef<React.ElementRef<"div">, ITabProps>((props, forward
       data-tab-prev-combine-group-id=""
       data-position={JSON.stringify({ x: 0, y: 0 })}
     >
-      <div className={`${tabId === selectedTabId && "text-white"}`}>{boardDataContext.tab[tabId].name}</div>
+      <div className={`overflow-x-auto ${tabId === selectedTabId && "text-white"}`}>{boardDataContext.tab[tabId].name}</div>
     </div>
   );
 });
@@ -920,5 +932,6 @@ const ResizeHandlers = ({ groupId }: { groupId: string }) => {
 Group.displayName = "Group";
 GroupHeader.displayName = "GroupHeader";
 Tab.displayName = "Tab";
+TabContent.displayName = "TabContent";
 
 export { Provider, Container, Groups };
