@@ -12,6 +12,8 @@ pnpm add react-group-tabs
 
 react group tabs component [Demo](https://group-tabs.vercel.app/)
 
+https://github.com/user-attachments/assets/c57491c6-df83-4a75-9520-e8afe8cd583f
+
 ### Usage
 
 ```jsx
